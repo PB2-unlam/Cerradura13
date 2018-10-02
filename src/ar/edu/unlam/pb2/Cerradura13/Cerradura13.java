@@ -27,6 +27,7 @@ public class Cerradura13 {
 			this.contadorFallidas=0;
 		} else 
 			this.contadorFallidas+=1;
+			
 			if(contadorFallidas>=this.intentos) {
 				this.seBloqueo=true;
 				
@@ -37,6 +38,7 @@ public class Cerradura13 {
 	//cerrar
 	public Boolean cerrar() {
 		estadoCerradura=false;
+		this.contadorAperturas=0;
 		return this.estadoCerradura;
 	}
 	

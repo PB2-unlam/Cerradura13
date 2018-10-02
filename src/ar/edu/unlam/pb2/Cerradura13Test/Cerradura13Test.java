@@ -32,5 +32,16 @@ public class Cerradura13Test {
 		Assert.assertTrue(bloqueada);
 	}
 
-	
+	@Test
+	public void contadorAperturasExitosas() {
+		Cerradura13 cerraduraExitosas = new Cerradura13(123, 2);
+		cerraduraExitosas.abrir(123);
+		cerraduraExitosas.cerrar();
+		cerraduraExitosas.abrir(123);
+		cerraduraExitosas.abrir(123);
+		cerraduraExitosas.abrir(123);
+		Integer aperturatest = 3;
+		Integer aperturas = cerraduraExitosas.contarAperturas();
+		Assert.assertEquals(aperturatest, aperturas);
+	}
 }
